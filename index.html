@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Projects, stock, profit, loss, profit and loss"
+    />
+    <meta name="description" content="Web Development Projects" />
+    <meta name="author" content="" />
+    <meta name="Copyright" content="" />
+    <link rel="icon" href="" sizes="16x16" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Stock: Profit/Loss</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        src="/images/Finance_desktop_green.svg"
+        class="img-desktop"
+        id="img-desktop-green"
+      />
+      <img
+        src="/images/Finance_desktop_red.svg"
+        class="img-desktop hidden"
+        id="img-desktop-red"
+      />
+      <div class="content">
+        <h1>Stock - <i>Profit or Loss</i> status</h1>
+        <hr />
+        <form>
+          <h3>Purchase Price (₹)</h3>
+          <input
+            id="purchase-price"
+            type="number"
+            min="0"
+            step="0.01"
+            required
+            oninput="validity.valid||(value='');"
+          />
+          <h3>Purchase Quantity</h3>
+          <input
+            id="purchase-qty"
+            type="number"
+            min="1"
+            required
+            oninput="validity.valid||(value='');"
+          />
+          <h3>Current Price (₹)</h3>
+          <input
+            id="current-price"
+            type="number"
+            min="0"
+            step="0.01"
+            required
+            oninput="validity.valid||(value='');"
+          />
+          <button id="btn-check" type="button">Check Status</button>
+        </form>
+        <div id="spinner"></div>
+        <div class="txt-output"></div>
+      </div>
+    </div>
+    <footer>
+      <p>Crafted by Keyur Shah</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

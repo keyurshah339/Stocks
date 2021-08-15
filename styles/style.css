@@ -1,0 +1,142 @@
+:root {
+    --lightestCream: #F0EBE0;
+    --lighterCream: #BFBEB3;
+    --cream: #D6CCB3;
+    --greyShade: #857F70;
+    --black: #0D1712;
+    --green: #114E39;
+    --red: #8f1010;
+}
+
+body {
+    background-color: var(--lighterCream);
+    color: var(--cream);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(to left, var(--green) 60%, var(--lightestCream) 60%);
+    border: 0.5rem solid var(--black);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 10px var(--black), -2px -2px 10px var(--black);
+    display: flex;
+    justify-content: space-around;
+}
+
+.content {
+    width: 50%;
+    height: 90%;
+    margin: auto 0;
+    text-align: center;
+}
+
+.social-icons {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.social-media {
+    padding: 0.2rem;
+    border-radius: 50%;
+}
+
+.social-media:hover {
+    box-shadow: 2px 2px 10px var(--green), -2px -2px 10px var(--green);
+}
+
+.img-desktop {
+    width: 30%;
+}
+
+.hidden {
+    display: none;
+}
+
+h3 {
+    margin-block-end: 0;
+}
+
+#btn-check {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0.5rem;
+    border: 1px solid var(--cream);
+    outline: none;
+    background-color: var(--lightestCream);
+    color: var(--black);
+    font-weight: bold;
+}
+
+#btn-check:hover {
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+input {
+    outline: none;
+    padding-top: 0.5rem;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    width: 25%;
+    background: transparent;
+    border: transparent;
+    border-bottom: 1px solid var(--cream);
+    color: inherit;
+}
+
+.txt-output {
+    margin: 1rem;
+    font-size: x-large;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: var(--black);
+}
+
+#spinner {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--lighterCream);
+    border-top: 3px solid var(--black);
+    border-radius: 100%;
+    margin: auto;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#spinner.show {
+    display: block;
+}
+
+@media only screen and (max-width: 500px){
+    .txt-output{
+        font-size: larger;
+    }
+}
